@@ -5,35 +5,156 @@ import Card from '../components/Card.astro';
 
 <Layout title="Tentoden">
   <main>
-    <h1>Welcome to <span class="text-gradient">Tentoden</span></h1>
-    <p class="instructions">New site is brewing</p>
+    <section class="container">
+      <div class="hero"></div>
+      <div class="titles border-thick">
+        <h2>
+          <span class="med">If</span>
+          <span class="small">you want it</span>
+          <span class="med">to happen</span>
+          <span class="med">make it</span>
+          <span class="small">happen now!</span>
+          <span class="large">Make</span>
+          <span class="med">someday</span>
+          <span class="small">today!</span>
+        </h2>
+        <h1 class="display-1"><span>T</span>entoden</h1>
+        <p>
+          Tentoden is a Czech phrase meaning today is the day. It is a reminder to live in the
+          present moment and to not put off until tomorrow what you can do today.
+        </p>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
+  .display-1 {
+    color: var(--main-color);
     font-size: 3rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
     font-weight: 800;
+    margin: 0 0 0 -35px;
+  }
+
+  .display-1 span {
+    color: white;
+  }
+
+  .border-thick {
+    border-left: 45px solid var(--main-color);
+  }
+
+  /* Hero & Titles */
+
+  .hero {
+    display: none;
+  }
+
+  .titles {
+    height: 100vh;
+    padding: 2rem 2rem 2rem 0;
+    background-color: #f6f6f6;
+    background-blend-mode: hard-light;
+    background-image: url('/birds.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .titles h2 {
+    font-size: 3.5rem;
     margin: 0;
+    padding: 0;
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+
+  .titles h2 span {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 800;
   }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
+
+  span.small {
+    font-size: 40%;
+    line-height: 1;
+    margin-left: 0.25rem;
+  }
+
+  span.med {
+    font-size: 60%;
+    line-height: 1;
+    margin-left: 0.2rem;
+  }
+
+  span.large {
+    line-height: 0.7;
+  }
+
+  .titles p {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    max-width: 360px;
+    margin-top: 4rem;
+    margin-left: 0.5rem;
+  }
+
+  /* Media Queries */
+
+  @media (min-width: 480px) {
+    .border-thick {
+      border-left-width: 55px;
+    }
+    .display-1 {
+      margin-left: -54px;
+      font-size: 4.8rem;
+    }
+
+    .titles h2 {
+      font-size: 4rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .border-thick {
+      border-left-width: 75px;
+    }
+    .display-1 {
+      margin-left: -70px;
+      font-size: 6rem;
+      letter-spacing: 0.2rem;
+    }
+
+    .titles h2 {
+      font-size: 5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .hero {
+      display: flex;
+      width: 70%;
+      background-color: var(--main-color);
+      background-blend-mode: hard-light;
+      background-image: url('/carl2steam.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .titles {
+      width: 480px;
+      flex: 0 0 480px;
+      background-image: none;
+    }
+
+    .title p {
+      font-size: 1.6rem;
+    }
   }
 </style>
