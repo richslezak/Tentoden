@@ -1,0 +1,68 @@
+---
+const today = new Date();
+---
+
+<footer class="border-top">
+  <div class="container">
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4">
+      <ul class="breadcrumb justify-content-start d-none d-sm-flex mb-0">
+        <li class="breadcrumb-item">
+          <a href="#nav-about" class="px-2 text-body-secondary">About</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#nav-design" class="px-2 text-body-secondary">Design</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#nav-development" class="px-2 text-body-secondary">Development</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#nav-deployment" class="px-2 text-body-secondary">Deployment</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#nav-contact" class="px-2 text-body-secondary">Contact</a>
+        </li>
+      </ul>
+      <div class="d-flex justify-content-end">
+        <a class="nav-link text-body-secondary" href="#">
+          Top
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <p class="text-center py-1 my-0">
+    <small>&copy; {today.getFullYear()} Tentoden. All rights reserved.</small>
+  </p>
+</footer>
+
+<style lang="scss">
+  footer {
+    .breadcrumb-item {
+      & + .breadcrumb-item {
+        padding-left: 0.3rem;
+        &::before {
+          content: '|';
+          padding-right: 0.3rem;
+        }
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    p {
+      background-color: var(--orange-10);
+      color: var(--orange-4);
+    }
+  }
+</style>

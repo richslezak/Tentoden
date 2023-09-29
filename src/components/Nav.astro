@@ -1,0 +1,80 @@
+---
+import ColorModeToggler from './ColorModeToggler.astro';
+---
+
+<nav class="navbar navbar-expand-md fixed-top" aria-label="Offcanvas navbar large">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Tentoden</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <!-- <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Tentoden</h5> -->
+        <a id="offcanvasNavbarLabel" class="navbar-brand" href="#">Tentoden</a>
+        <button
+          type="button"
+          class="btn-close btn-close-white2"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#nav-about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nav-design">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nav-development">Development</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nav-deployment">Deployment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nav-contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <ColorModeToggler />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style lang="scss">
+  .navbar {
+    background-color: var(--orange-10);
+    .nav-link,
+    .navbar-brand {
+      color: var(--orange-4);
+      &:hover {
+        color: var(--orange-6);
+      }
+    }
+    .offcanvas {
+      background-color: var(--orange-10);
+    }
+    .navbar-toggler {
+      color: var(--orange-4);
+      border-color: var(--orange-4);
+      &:hover {
+        border-color: var(--orange-6);
+      }
+    }
+  }
+</style>

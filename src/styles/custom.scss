@@ -1,0 +1,85 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+// example overide bs variables
+// $primary: #da833e;
+
+:root {
+  // example overide bs root variables
+  // --bs-dropdown-link-active-bg: red;
+  --tentoden-main-color: #da833e;
+  // White
+  --tentoden-white-1: #f1f1f1;
+  --tentoden-white-2: #ebebeb;
+  --tentoden-black-1: #000;
+  --tentoden-black-2: #111;
+  --tentoden-gray-1: #202020;
+  --tentoden-gray-2: #646464;
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'theme-colors-dark.scss';
+@import 'theme-colors-light.scss';
+
+// Then add additional custom code here
+
+body {
+  background-color: var(--blue-1);
+}
+
+// Nav sections for anchor links
+section[id^='nav-'] {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  margin-bottom: -12rem;
+  &[id$='deployment'] {
+    margin-bottom: 0;
+  }
+  &[id$='contact'] {
+    margin-bottom: 0;
+  }
+}
+
+// Image Skewed
+.img-skewed {
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.img-skewed-start {
+  perspective-origin: left center;
+}
+
+.img-skewed-start .img-skewed-item {
+  transform: rotateY(calc(35deg * -1)) rotateX(15deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.img-skewed-end {
+  perspective-origin: right center;
+}
+
+.img-skewed-end .img-skewed-item {
+  transform: rotateY(35deg) rotateX(15deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+// Media Queries
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

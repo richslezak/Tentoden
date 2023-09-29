@@ -1,0 +1,95 @@
+$color-mode-type: data;
+
+@include color-mode(dark) {
+  // Gray
+  --gray-1: #181818;
+  --gray-2: #1b1b1b;
+  --gray-3: #282828;
+  --gray-4: #303030;
+  --gray-5: #373737;
+  --gray-6: #3f3f3f;
+  --gray-7: #4a4a4a;
+  --gray-8: #606060;
+  --gray-9: #6e6e6e;
+  --gray-10: #818181;
+  --gray-11: #b1b1b1;
+  --gray-12: #eee;
+
+  --gray-a1: hsla(0, 0%, 100%, 0);
+  --gray-a2: hsla(0, 0%, 100%, 0.013);
+  --gray-a3: hsla(0, 0%, 100%, 0.069);
+  --gray-a4: hsla(0, 0%, 100%, 0.104);
+  --gray-a5: hsla(0, 0%, 100%, 0.134);
+  --gray-a6: hsla(0, 0%, 100%, 0.169);
+  --gray-a7: hsla(0, 0%, 100%, 0.216);
+  --gray-a8: hsla(0, 0%, 100%, 0.312);
+  --gray-a9: hsla(0, 0%, 100%, 0.372);
+  --gray-a10: hsla(0, 0%, 100%, 0.455);
+  --gray-a11: hsla(0, 0%, 100%, 0.662);
+  --gray-a12: hsla(0, 0%, 100%, 0.926);
+
+  // Orange
+  --orange-1: #1f1206;
+  --orange-2: #271504;
+  --orange-3: #341c0a;
+  --orange-4: #3f220d;
+  --orange-5: #4b2910;
+  --orange-6: #5d3213;
+  --orange-7: #7e4318;
+  --orange-8: #c36522;
+  --orange-9: #f76808;
+  --orange-10: #ff802b;
+  --orange-11: #ffa366;
+  --orange-12: #ffe0c2;
+
+  --orange-a1: rgba(250, 0, 0, 0.031);
+  --orange-a2: rgba(255, 0, 0, 0.065);
+  --orange-a3: rgba(253, 55, 0, 0.122);
+  --orange-a4: rgba(255, 85, 0, 0.169);
+  --orange-a5: rgba(255, 102, 0, 0.221);
+  --orange-a6: rgba(255, 110, 7, 0.299);
+  --orange-a7: rgba(255, 120, 24, 0.442);
+  --orange-a8: rgba(255, 128, 37, 0.741);
+  --orange-a9: rgba(255, 106, 7, 0.966);
+  --orange-a10: #ff802b;
+  --orange-a11: #ffa366;
+  --orange-a12: #ffe0c2;
+
+  // Blue
+  --blue-1: #0f1720;
+  --blue-2: #0f1b2d;
+  --blue-3: #11253f;
+  --blue-4: #122b4c;
+  --blue-5: #12325a;
+  --blue-6: #123d6f;
+  --blue-7: #0f5096;
+  --blue-8: #1276e2;
+  --blue-9: #0091ff;
+  --blue-10: #3cabff;
+  --blue-11: #6bc1ff;
+  --blue-12: #c2e6ff;
+
+  --blue-a1: rgba(0, 0, 252, 0.035);
+  --blue-a2: rgba(0, 55, 255, 0.091);
+  --blue-a3: rgba(0, 102, 255, 0.169);
+  --blue-a4: rgba(0, 110, 254, 0.226);
+  --blue-a5: rgba(3, 116, 255, 0.286);
+  --blue-a6: rgba(8, 123, 255, 0.377);
+  --blue-a7: rgba(7, 127, 255, 0.546);
+  --blue-a8: rgba(17, 132, 255, 0.875);
+  --blue-a9: #0091ff;
+  --blue-a10: #3cabff;
+  --blue-a11: #6bc1ff;
+  --blue-a12: #c2e4ff;
+
+  // BS overides
+  .navbar {
+    .btn-close {
+      filter: invert(1) grayscale(100%) brightness(0);
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}

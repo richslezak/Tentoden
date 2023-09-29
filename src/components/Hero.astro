@@ -1,0 +1,54 @@
+<div
+  class="hero d-flex flex-column justify-content-center align-items-center text-center min-vh-100"
+>
+  <div class="px-2 text-center">
+    <h1 class="display-4 lh-1 mb-3">
+      Welcome to <span>Tentoden</span>
+    </h1>
+    <div class="col-11 col-sm-7 mx-auto">
+      <p class="lead mb-4">
+        Tentoden is a digital marketing agency that helps businesses grow online.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="#nav-contact" class="btn btn-primary btn-lg px-4 me-sm-2">Contact Us</a>
+        <a href="#nav-about" class="btn btn-primary btn-lg px-4">Our Services</a>
+      </div>
+    </div>
+  </div>
+</div>
+<style lang="scss">
+  .hero {
+    h1,
+    p {
+      color: var(--tentoden-white-1);
+      text-shadow: 1px 1px 2px var(--tentoden-gray-2);
+      span {
+        color: var(--orange-10);
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      // background-image: url('doug-scott.jpeg');
+      // background-image: url('Himalayas.jpeg');
+      // background-image: url('japanese-sunrise.jpg');
+      background-image: linear-gradient(
+          45deg,
+          hsla(168, 85%, 52%, 0.7),
+          hsla(263, 88%, 45%, 0.7) 100%
+        ),
+        url('/japanese-sunrise.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      // filter: grayscale(100%);
+      // background-blend-mode: saturation;
+    }
+  }
+
+  div {
+    z-index: 2;
+  }
+</style>
