@@ -18,6 +18,36 @@
 </div>
 <style lang="scss">
   .hero {
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      // background-image: url('doug-scott.jpeg');
+      // background-image: url('Himalayas.jpeg');
+      background-image: url('japanese-sunrise.jpg');
+      // background-image: linear-gradient(
+      //     45deg,
+      //     hsla(168, 85%, 52%, 0.7),
+      //     hsla(263, 88%, 45%, 0.7) 100%
+      //   ),
+      //   url('/japanese-sunrise.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   inset: 0;
+    //   width: 100%;
+    //   height: 100vh;
+    //   background-color: var(--tentoden-white-1);
+    //   opacity: 0.5;
+    // }
     h1,
     p {
       color: var(--tentoden-white-1);
@@ -25,26 +55,6 @@
       span {
         color: var(--orange-10);
       }
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      // background-image: url('doug-scott.jpeg');
-      // background-image: url('Himalayas.jpeg');
-      // background-image: url('japanese-sunrise.jpg');
-      background-image: linear-gradient(
-          45deg,
-          hsla(168, 85%, 52%, 0.7),
-          hsla(263, 88%, 45%, 0.7) 100%
-        ),
-        url('/japanese-sunrise.jpg');
-      background-attachment: fixed;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      // filter: grayscale(100%);
-      // background-blend-mode: saturation;
     }
   }
 
