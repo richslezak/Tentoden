@@ -93,9 +93,7 @@
     }
     .dropdown-item.active,
     .dropdown-item:active {
-      // color: var(--bs-dropdown-link-active-color);
-      // text-decoration: none;
-      background-color: var(--orange-10);
+      background-color: var(--gray-10);
     }
     .dropdown-toggle::after {
       display: none;
@@ -104,5 +102,18 @@
 
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
+  }
+
+  @media (max-width: 767px) {
+    .btn-bd-primary {
+      font-size: 2rem;
+      border-color: transparent;
+      padding-left: 0;
+    }
+    .dropdown-item {
+      font-size: 1.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
 </style>

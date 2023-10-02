@@ -22,7 +22,6 @@ import ColorModeToggler from './ColorModeToggler.astro';
       aria-labelledby="offcanvasNavbarLabel"
     >
       <div class="offcanvas-header">
-        <!-- <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Tentoden</h5> -->
         <a id="offcanvasNavbarLabel" class="navbar-brand" href="#">Tentoden</a>
         <button
           type="button"
@@ -74,6 +73,16 @@ import ColorModeToggler from './ColorModeToggler.astro';
       border-color: var(--orange-4);
       &:hover {
         border-color: var(--orange-6);
+      }
+    }
+    @media (max-width: 767px) {
+      .offcanvas {
+        .navbar-brand {
+          font-size: 2rem;
+        }
+        .nav-link {
+          font-size: 1.75rem;
+        }
       }
     }
   }
