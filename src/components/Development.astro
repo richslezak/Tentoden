@@ -1,7 +1,21 @@
 <section id="nav-development" class="min-vh-100">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-12 col-md-5 col-lg-6">
+      <div class="col-12 col-md-7 order-md-2">
+        <h2 class="display-6">Development</h2>
+        <p class="lead mb-2">
+          We work closely with our clients to understand their business needs and deliver tailored
+          solutions that meet their goals. Whether you need a simple landing page or a complex web
+          application, we have the expertise to bring your vision to life.
+        </p>
+        <!-- <p class="mb-5">
+          Our development services
+          create custom solutions for marketing landing pages, full websites, and applications using
+          modern technologies to deliver high-performance and engaging digital experiences that meet
+          your business goals.
+        </p> -->
+      </div>
+      <div class="col-12 col-md-5 order-md-1">
         <div class="img-skewed img-skewed-end">
           <img
             src="screens/vsc-react.webp"
@@ -10,23 +24,34 @@
           />
         </div>
       </div>
-      <div class="col-12 col-md-7 col-lg-6">
-        <h2 class="display-6">Development</h2>
-        <p class="lead">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sed velit fuga voluptas!
-          Incidunt in animi nesciunt culpa hic voluptatem optio! Asperiores nostrum laudantium vel
-          veritatis, beatae repudiandae recusandae nihil enim, dolor dolorum hic quidem quis
-          adipisci aperiam tempore iure.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam consequuntur expedita
-          repellendus. Nemo, possimus. Nulla, consectetur. Inventore unde mollitia id iusto odit
-          accusamus aliquid dolorem quasi eligendi, quas vel dignissimos animi quos eos aspernatur
-          cum minus, iste eveniet fugiat doloribus, officiis expedita. Laborum nostrum veritatis
-          cupiditate rem numquam illum earum alias amet nesciunt debitis maiores inventore quibusdam
-          quisquam commodi
-        </p>
-      </div>
     </div>
   </div>
 </section>
+<style lang="scss">
+  @media (min-width: 768px) {
+    // Image Skewed
+    .img-skewed {
+      perspective: 1500px;
+    }
+
+    .img-skewed-start {
+      perspective-origin: left center;
+    }
+
+    .img-skewed-start .img-skewed-item {
+      transform: rotateY(calc(35deg * -1)) rotateX(15deg);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .img-skewed-end {
+      perspective-origin: right center;
+    }
+
+    .img-skewed-end .img-skewed-item {
+      transform: rotateY(35deg) rotateX(15deg);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
+</style>
