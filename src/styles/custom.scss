@@ -42,31 +42,6 @@ section[id^='nav-'] {
   }
 }
 
-// Image Skewed
-.img-skewed {
-  perspective: 1500px;
-}
-
-.img-skewed-start {
-  perspective-origin: left center;
-}
-
-.img-skewed-start .img-skewed-item {
-  transform: rotateY(calc(35deg * -1)) rotateX(15deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.img-skewed-end {
-  perspective-origin: right center;
-}
-
-.img-skewed-end .img-skewed-item {
-  transform: rotateY(35deg) rotateX(15deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
 // Media Queries
 @media (min-width: 576px) {
 }
