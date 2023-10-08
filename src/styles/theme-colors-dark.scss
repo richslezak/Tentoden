@@ -1,6 +1,9 @@
-$color-mode-type: data;
+// $color-mode-type: data;
 
-@include color-mode(dark) {
+// @include color-mode(dark) {
+
+[data-bs-theme='dark'],
+[data-bs-theme='auto'] {
   // Gray
   --gray-1: #181818;
   --gray-2: #1b1b1b;
@@ -27,6 +30,33 @@ $color-mode-type: data;
   --gray-a10: hsla(0, 0%, 100%, 0.455);
   --gray-a11: hsla(0, 0%, 100%, 0.662);
   --gray-a12: hsla(0, 0%, 100%, 0.926);
+
+  // Slate
+  --slate-1: #111113;
+  --slate-2: #18191b;
+  --slate-3: #212225;
+  --slate-4: #272a2d;
+  --slate-5: #2e3135;
+  --slate-6: #363a3f;
+  --slate-7: #43484e;
+  --slate-8: #5a6169;
+  --slate-9: #696e77;
+  --slate-10: #777b84;
+  --slate-11: #b0b4ba;
+  --slate-12: #edeef0;
+
+  --slate-a1: #00000000;
+  --slate-a2: #d8f4f609;
+  --slate-a3: #ddeaf814;
+  --slate-a4: #d3edf81d;
+  --slate-a5: #d9edfe25;
+  --slate-a6: #d6ebfd30;
+  --slate-a7: #d9edff40;
+  --slate-a8: #d9edff5d;
+  --slate-a9: #dfebfd6d;
+  --slate-a10: #e5edfd7b;
+  --slate-a11: #f1f7feb5;
+  --slate-a12: #fcfdffef;
 
   // Orange
   --orange-1: #1f1206;
@@ -91,5 +121,20 @@ $color-mode-type: data;
 
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .btn-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--orange-12);
+    // --bs-btn-color: var(--slate-12);
+    --bs-btn-bg: var(--orange-10);
+    --bs-btn-border-color: var(--orange-10);
+    --bs-btn-hover-color: var(--orange-10);
+    --bs-btn-hover-bg: var(--orange-a7);
+    --bs-btn-hover-border-color: var(--orange-10);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: var(--bs-btn-hover-bg);
+    --bs-btn-active-border-color: var(--bs-btn-hover-border-color);
   }
 }

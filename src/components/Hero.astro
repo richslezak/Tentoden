@@ -5,13 +5,13 @@
     <h1 class="display-4 lh-1 mb-3">
       Welcome to <span>Tentoden</span>
     </h1>
-    <div class="col-11 col-sm-7 mx-auto">
-      <p class="lead mb-4">
-        Tentoden is a digital marketing agency that helps businesses grow online
-      </p>
+    <div class="headline">
+      <p class="lead mb-4">Building your Online Presence, Assets and Brand Identity.</p>
+    </div>
+    <div class="buttons">
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="#nav-contact" class="btn btn-primary btn-lg px-4 me-sm-2">Contact Us</a>
-        <a href="#nav-about" class="btn btn-primary btn-lg px-4">Our Services</a>
+        <a href="#nav-contact" class="btn btn-primary btn-md px-4 me-sm-2">Contact Us</a>
+        <a href="#nav-about" class="btn btn-primary btn-md px-4">Our Services</a>
       </div>
     </div>
   </div>
@@ -56,9 +56,25 @@
         color: var(--orange-10);
       }
     }
+    .headline {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .buttons {
+      max-width: 260px;
+      margin: 0 auto;
+    }
   }
 
   div {
     z-index: 2;
+  }
+
+  @media (min-width: 576px) {
+    .hero {
+      .buttons {
+        max-width: 300px;
+      }
+    }
   }
 </style>
