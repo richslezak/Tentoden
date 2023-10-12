@@ -22,12 +22,25 @@ import ColorModeToggler from './ColorModeToggler.astro';
       aria-labelledby="offcanvasNavbarLabel"
     >
       <div class="offcanvas-header">
-        <a id="offcanvasNavbarLabel" class="navbar-brand" href="#">Tentoden</a>
         <button
           type="button"
-          class="btn-close btn-close-white2"
+          class="btn-close2 close-btn nav-link2"
           data-bs-dismiss="offcanvas"
-          aria-label="Close"></button>
+          aria-label="Close"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            ></path>
+          </svg>
+        </button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -57,22 +70,15 @@ import ColorModeToggler from './ColorModeToggler.astro';
 
 <style lang="scss">
   .navbar {
-    background-color: var(--orange-10);
-    .nav-link,
-    .navbar-brand {
-      color: var(--orange-4);
-      &:hover {
-        color: var(--orange-6);
-      }
-    }
-    .offcanvas {
-      background-color: var(--orange-10);
-    }
-    .navbar-toggler {
-      color: var(--orange-4);
-      border-color: var(--orange-4);
-      &:hover {
-        border-color: var(--orange-6);
+    .offcanvas-header {
+      justify-content: end;
+      .close-btn {
+        display: flex;
+        box-sizing: content-box;
+        font-size: 4rem;
+        padding: 0;
+        background: none;
+        border: 0;
       }
     }
     @media (max-width: 767px) {

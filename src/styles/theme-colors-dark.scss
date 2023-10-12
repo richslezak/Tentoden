@@ -112,32 +112,7 @@
   --blue-a11: #6bc1ff;
   --blue-a12: #c2e4ff;
 
-  // BS overides
-  .navbar {
-    .btn-close {
-      filter: invert(1) grayscale(100%) brightness(0);
-    }
-  }
-
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-
-  // .btn-primary {
-  //   --bs-btn-font-weight: 600;
-  //   --bs-btn-color: var(--orange-12);
-  //   --bs-btn-color: var(--slate-12);
-  //   --bs-btn-bg: var(--orange-10);
-  //   --bs-btn-border-color: var(--orange-10);
-  //   --bs-btn-hover-color: var(--orange-10);
-  //   --bs-btn-hover-bg: var(--orange-a7);
-  //   --bs-btn-hover-border-color: var(--orange-10);
-  //   --bs-btn-focus-shadow-rgb: 13, 110, 253;
-  //   --bs-btn-active-color: var(--bs-btn-hover-color);
-  //   --bs-btn-active-bg: var(--bs-btn-hover-bg);
-  //   --bs-btn-active-border-color: var(--bs-btn-hover-border-color);
-  // }
-
+  // Custom
   .btn-primary {
     --bs-btn-font-weight: 600;
     --bs-btn-color: var(--orange-10);
@@ -151,4 +126,49 @@
     --bs-btn-active-bg: var(--bs-btn-hover-bg);
     --bs-btn-active-border-color: var(--bs-btn-hover-border-color);
   }
-}
+
+  .navbar {
+    background-color: var(--orange-10);
+    .nav-link,
+    .navbar-brand {
+      color: var(--orange-4);
+      &:hover {
+        color: var(--orange-6);
+      }
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .offcanvas {
+      background-color: var(--orange-a7);
+      &.show,
+      &.hiding,
+      &.showing {
+        backdrop-filter: blur(5px);
+        .nav-link,
+        .navbar-brand {
+          color: var(--orange-10);
+        }
+        .bd-mode-toggle {
+          .btn-bd-primary {
+            color: var(--orange-10);
+          }
+        }
+      }
+    }
+    .bd-mode-toggle {
+      .btn-bd-primary {
+        color: var(--orange-4);
+      }
+    }
+    .offcanvas-header {
+      .close-btn {
+        color: var(--orange-10);
+      }
+    }
+    .navbar-toggler {
+      color: var(--orange-4);
+      border-color: transparent;
+    }
+  }
+} // end of data-bs-theme dark
