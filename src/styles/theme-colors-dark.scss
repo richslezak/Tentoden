@@ -145,6 +145,7 @@
       &.hiding,
       &.showing {
         backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         .nav-link,
         .navbar-brand {
           color: var(--orange-10);
