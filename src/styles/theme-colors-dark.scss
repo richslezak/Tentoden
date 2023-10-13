@@ -141,6 +141,7 @@
     }
     .offcanvas {
       background-color: var(--orange-a7);
+      border-left-color: var(--orange-10);
       &.show,
       &.hiding,
       &.showing {
@@ -170,6 +171,24 @@
     .navbar-toggler {
       color: var(--orange-4);
       border-color: transparent;
+    }
+  }
+
+  .hero {
+    h1,
+    p {
+      color: var(--slate-12);
+      text-shadow: 1px 1px 2px var(--slate-7);
+      span {
+        color: var(--orange-10);
+      }
+    }
+  }
+
+  footer {
+    p {
+      background-color: var(--orange-10);
+      color: var(--orange-4);
     }
   }
 } // end of data-bs-theme dark
