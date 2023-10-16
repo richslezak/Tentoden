@@ -39,13 +39,12 @@ import ColorModeToggler from './ColorModeToggler.astro';
       aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
     >
-      <!-- <span class="navbar-toggler-icon"></span> -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="1em"
         height="1em"
         fill="currentColor"
-        class="bi bi-list"
+        class="bi bi-list d-flex"
         viewBox="0 0 16 16"
       >
         <path
@@ -121,7 +120,6 @@ import ColorModeToggler from './ColorModeToggler.astro';
       }
     }
     .navbar-toggler {
-      display: flex;
       font-size: 2rem;
       &:focus {
         box-shadow: none;
