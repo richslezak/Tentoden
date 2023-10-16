@@ -4,7 +4,33 @@ import ColorModeToggler from './ColorModeToggler.astro';
 
 <nav class="navbar navbar-expand-md fixed-top" aria-label="Offcanvas navbar large">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Tentoden</a>
+    <a class="navbar-brand" href="#">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        fill="currentColor"
+        viewBox="0 0 20 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M 16.363636 15.712323 C 16.363636 15.871202 16.492434 16 16.651314 16 L 19.712324 16 C 19.871202 16 20 15.871202 20 15.712323 L 20 0.287677 C 20 0.128798 19.871202 0 19.712324 0 L 16.651314 0 C 16.492434 0 16.363636 0.128798 16.363636 0.287677 Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M 10.909091 15.712323 C 10.909091 15.871202 11.037889 16 11.196768 16 L 14.257778 16 C 14.416657 16 14.545455 15.871202 14.545455 15.712323 L 14.545455 5.62101 C 14.545455 5.462131 14.416657 5.333333 14.257778 5.333333 L 11.196768 5.333333 C 11.037889 5.333333 10.909091 5.462131 10.909091 5.62101 Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M 5.454545 15.712323 C 5.454545 15.871202 5.583343 16 5.742222 16 L 8.803232 16 C 8.962111 16 9.090909 15.871202 9.090909 15.712323 L 9.090909 5.62101 C 9.090909 5.462131 8.962111 5.333333 8.803232 5.333333 L 5.742222 5.333333 C 5.583343 5.333333 5.454545 5.462131 5.454545 5.62101 Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M -0 3.267879 C -0 3.426758 0.128797 3.555555 0.287677 3.555555 L 14.257778 3.555555 C 14.416657 3.555555 14.545455 3.426758 14.545455 3.267879 L 14.545455 0.287677 C 14.545455 0.128798 14.416657 0 14.257778 0 L 0.287677 0 C 0.128797 0 -0 0.128798 -0 0.287677 Z"
+        ></path>
+      </svg>
+      Tentoden
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -13,7 +39,20 @@ import ColorModeToggler from './ColorModeToggler.astro';
       aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        ></path>
+      </svg>
     </button>
     <div
       class="offcanvas offcanvas-end"
@@ -70,8 +109,23 @@ import ColorModeToggler from './ColorModeToggler.astro';
 
 <style lang="scss">
   .navbar {
-    .navbar-toggler:focus {
-      box-shadow: none;
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      svg {
+        width: 2rem;
+        height: auto;
+        margin-right: 0.5rem;
+      }
+    }
+    .navbar-toggler {
+      display: flex;
+      font-size: 2rem;
+      &:focus {
+        box-shadow: none;
+      }
     }
     .offcanvas-header {
       justify-content: end;

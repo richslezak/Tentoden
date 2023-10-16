@@ -129,12 +129,18 @@
 
   .navbar {
     background-color: var(--orange-10);
-    .nav-link,
-    .navbar-brand {
+    .nav-link {
       color: var(--orange-4);
       &:hover {
-        color: var(--orange-6);
+        color: var(--orange-2);
       }
+    }
+    .navbar-brand {
+      color: var(--orange-2);
+    }
+    .navbar-toggler {
+      color: var(--orange-4);
+      border-color: transparent;
     }
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -156,16 +162,15 @@
     .bd-mode-toggle {
       .btn-bd-primary {
         color: var(--orange-4);
+        &:hover {
+          color: var(--orange-2);
+        }
       }
     }
     .offcanvas-header {
       .close-btn {
         color: var(--orange-4);
       }
-    }
-    .navbar-toggler {
-      color: var(--orange-4);
-      border-color: transparent;
     }
   }
 
