@@ -4,21 +4,31 @@ import ContactForm from './ContactForm.astro';
 
 <section id="nav-contact" class="min-vh-100">
   <div class="container">
-    <h2 class="display-6">Contact</h2>
+    <h2 class="display-4 mb-4">Contact</h2>
     <div class="row">
-      <div class="col-12 col-md-5 col-lg-7">
-        <p class="lead">
-          You are here for a reason so contact us today and lets get your project off the ground.
+      <div class="col-12 col-md-6 col-lg-7">
+        <p class="lead mb-5 fs-4">
+          Ready to bring your visions to life? Let's make your dream websites a reality! Whether
+          you're looking for stunning graphic designs, cutting-edge web sites, or a perfect blend of
+          both, we're here to help you shine online.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusamus vitae fuga
-          assumenda quia culpa dignissimos exercitationem quam qui dolorem similique! Odio soluta
-          vero voluptatum id amet, ipsam hic temporibus.
+        <p class="mb-5 fs-5">
+          Don't hesitate to get in touch and share your ideas, goals, or even just a friendly
+          'hello.' We're excited to hear from you, so go ahead, fill out the form below, and let's
+          start the conversation about your next big projects. Your dream websites are just a click
+          away!"
         </p>
       </div>
-      <div class="col-12 col-md-7 col-lg-5">
+      <div class="col-12 col-md-6 col-lg-5">
         <ContactForm />
       </div>
     </div>
   </div>
 </section>
+<style lang="scss">
+  @media (min-width: 992px) {
+    p {
+      padding-right: 5rem;
+    }
+  }
+</style>

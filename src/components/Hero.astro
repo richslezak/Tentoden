@@ -2,11 +2,11 @@
   class="hero d-flex flex-column justify-content-center align-items-center text-center min-vh-100"
 >
   <div class="px-2 text-center">
-    <h1 class="display-4 lh-1 mb-3">
+    <h1 class="display-2 lh-1 mb-3">
       Welcome to <span>Tentoden</span>
     </h1>
     <div class="headline">
-      <p class="lead mb-4">Building your Online Presence, Assets and Brand Identity.</p>
+      <p class="lead mb-4 fs-3">Building your Online Presence, Assets and Brand Identity.</p>
     </div>
     <div class="buttons">
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -40,7 +40,7 @@
       opacity: 0.5;
     }
     .headline {
-      max-width: 300px;
+      max-width: 350px;
       margin: 0 auto;
     }
     .buttons {
@@ -57,6 +57,14 @@
     .hero {
       .buttons {
         max-width: 300px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      .headline {
+        max-width: 400px;
       }
     }
   }
