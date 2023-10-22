@@ -15,13 +15,7 @@ const content = title || description;
 
 <div class="card shadow-sm">
   {ribbon && <Ribbon ribbonTitle={ribbonTitle} />}
-  <img
-    src={imgsrc}
-    alt={title}
-    class={content && 'no-bottom-radius'}
-    decoding="async"
-    loading="lazy"
-  />
+  <img src={imgsrc} alt={title} class={content && 'no-bottom-radius'} />
   {href && <a href={href} class="stretched-link" target="_blank" />}
   {
     content && (
