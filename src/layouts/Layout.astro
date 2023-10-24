@@ -27,8 +27,12 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../config';
     <Footer />
     <script>
       import '../scripts/custom.js';
+      window.onload = function () {
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js';
+        document.body.appendChild(script);
+      };
     </script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </body>
 </html>
 <!-- <style lang="scss" is:global></style> -->
