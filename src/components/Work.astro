@@ -4,7 +4,31 @@ import ImgCard from './ImgCard.astro';
 
 <section id="nav-work" class="min-vh-100">
   <div class="container mb-5">
-    <h2 class="display-4 mb-4">Work</h2>
+    <div class="title mb-4 d-flex align-items-center">
+      <h2 class="display-4">Work</h2>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        fill="currentColor"
+        class="bi bi-cloud-arrow-up"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"
+        ></path>
+        <path
+          d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"
+        ></path>
+      </svg>
+    </div>
+    <p class="lead mb-5 fs-4">
+      Below, you'll find a selection of my work, which includes a variety of projects crafted over
+      the years in the fields of graphic design, web design, and website development. These projects
+      are presented in chronological order, starting with the most recent and progressing to the
+      earliest.
+    </p>
     <div class="row" data-masonry='{"percentPosition": true }'>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <ImgCard
@@ -69,10 +93,6 @@ import ImgCard from './ImgCard.astro';
         <ImgCard imgsrc="projects/plp-logo-skull.webp" />
       </div>
 
-      <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <ImgCard imgsrc="projects/bu-tennis.webp" />
-      </div> -->
-
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <ImgCard imgsrc="projects/canfield.webp" />
       </div>
@@ -84,10 +104,6 @@ import ImgCard from './ImgCard.astro';
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <ImgCard imgsrc="projects/dj416.webp" />
       </div>
-
-      <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <ImgCard imgsrc="projects/flower-child.webp" />
-      </div> -->
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <ImgCard imgsrc="projects/hypaspace-cd-inlet.webp" />
@@ -105,13 +121,41 @@ import ImgCard from './ImgCard.astro';
         <ImgCard imgsrc="projects/hypaspace-flyer.webp" />
       </div>
 
-      <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <ImgCard imgsrc="projects/james-joseph-studio.webp" />
-      </div> -->
-
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
         <ImgCard imgsrc="projects/shirt.webp" />
       </div>
     </div>
   </div>
 </section>
+<style lang="scss">
+  section {
+    background-color: var(--slate-6);
+    clip-path: polygon(0 0, 100% 2rem, 100% 100%, 0 100%);
+    margin-top: -2rem;
+  }
+
+  .title {
+    h2 {
+      margin-right: 0.7rem;
+    }
+    svg {
+      font-size: 3rem;
+      color: var(--orange-10);
+    }
+  }
+
+  @media (min-width: 768px) {
+    section {
+      clip-path: polygon(0 0, 100% 5rem, 100% 100%, 0 100%);
+      margin-top: -5rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .title {
+      svg {
+        font-size: 4rem;
+      }
+    }
+  }
+</style>

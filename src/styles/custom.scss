@@ -35,15 +35,8 @@ body {
 
 // Nav sections for anchor links
 section[id^='nav-'] {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  margin-bottom: -12rem;
-  &[id$='deployment'] {
-    margin-bottom: 0;
-  }
-  &[id$='contact'] {
-    margin-bottom: 0;
-  }
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 // Media Queries
@@ -51,6 +44,34 @@ section[id^='nav-'] {
 }
 
 @media (min-width: 768px) {
+  section[id^='nav-'] {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  .img-skewed {
+    perspective: 1500px;
+  }
+
+  .img-skewed-start {
+    perspective-origin: left center;
+  }
+
+  .img-skewed-start .img-skewed-item {
+    transform: rotateY(calc(35deg * -1)) rotateX(15deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .img-skewed-end {
+    perspective-origin: right center;
+  }
+
+  .img-skewed-end .img-skewed-item {
+    transform: rotateY(35deg) rotateX(15deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 }
 
 @media (min-width: 992px) {
