@@ -1,9 +1,15 @@
+---
+import 'typed-query-selector';
+---
+
 <form
   name="contact"
   method="POST"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
   action="/success/"
+  class="needs-validation"
+  novalidate
 >
   <input name="bot-field" class="d-none" />
   <input type="hidden" name="subject" value="New Lead from Tentoden" />
@@ -15,8 +21,10 @@
       class="form-control"
       id="floatingName"
       placeholder="Joe P. Smith"
+      required
     />
     <label for="floatingName">Your Name</label>
+    <div class="invalid-feedback">Name is required</div>
   </div>
   <div class="form-floating mb-3">
     <input
@@ -25,8 +33,10 @@
       class="form-control"
       id="floatingInput"
       placeholder="name@example.com"
+      required
     />
     <label for="floatingInput">Email Address</label>
+    <div class="invalid-feedback">Email address is required</div>
   </div>
   <p class="mb-0"><em>Select services needed</em></p>
   <div class="row">
@@ -113,3 +123,26 @@
     cursor: pointer;
   }
 </style>
+
+<script>
+  (() => {
+    'use strict';
+
+    const forms = document.querySelectorAll('form.needs-validation');
+
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        'submit',
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add('was-validated');
+        },
+        false
+      );
+    });
+  })();
+</script>
