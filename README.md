@@ -1,5 +1,7 @@
 # Tentoden
 
+## Rich Slezak's Design and Develpoment [portfolio](https://tentoden.com/)
+
 All commands are run from the root of the project, from a terminal:
 
 | Command                | Action                                           |
