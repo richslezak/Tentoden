@@ -1,3 +1,7 @@
+---
+import Callout from './Callout.astro';
+---
+
 <section id="nav-design" class="min-vh-100">
   <div class="container">
     <div class="row align-items-center mb-5">
@@ -35,101 +39,29 @@
     </div>
     <div class="row align-itemns-center pt-5">
       <ul class="list-unstyled">
-        <li class="d-flex">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              class="bi bi-check-lg"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
-              ></path>
-            </svg>
-          </div>
-
-          <div class="ms-2">
-            <h4 class="mb-1">Graphic Design</h4>
-            <p class="text-body-secondary fs-5">
-              I'm here to help you effectively communicate your brand message and make you stand out
-              in a crowded market.
-            </p>
-          </div>
+        <li>
+          <Callout
+            title="Graphic Design"
+            text="My goal is to support you in effectively conveying your brand's message, helping you shine in a crowded market and connect with your target audience."
+          />
         </li>
-        <li class="d-flex">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              class="bi bi-check-lg"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
-              ></path>
-            </svg>
-          </div>
-
-          <div class="ms-2">
-            <h4 class="mb-1">Web Design</h4>
-            <p class="text-body-secondary fs-5">
-              With my expertise, I create modern and responsive designs tailored to your brand and
-              business needs. It's all about delivering a seamless user experience on all devices.
-            </p>
-          </div>
+        <li>
+          <Callout
+            title="Web Design"
+            text="Crafting modern, responsive designs tailored to your brand and business, my focus is delivering a seamless user experience across all devices."
+          />
         </li>
-        <li class="d-flex">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              class="bi bi-check-lg"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
-              ></path>
-            </svg>
-          </div>
-
-          <div class="ms-2">
-            <h4 class="mb-1">UI Design</h4>
-            <p class="text-body-secondary fs-5">
-              I focus on crafting visually appealing and user-friendly interfaces that enhance the
-              user experience and create engaging digital products.
-            </p>
-          </div>
+        <li>
+          <Callout
+            title="UI Design"
+            text="The emphasis here is on crafting visually appealing, user-friendly interfaces that elevate the user experience and result in captivating digital products."
+          />
         </li>
-        <li class="d-flex">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              fill="currentColor"
-              class="bi bi-check-lg"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"
-              ></path>
-            </svg>
-          </div>
-
-          <div class="ms-2">
-            <h4 class="mb-1">UX Design</h4>
-            <p class="text-body-secondary fs-5">
-              When it comes to UX design, I specialize in creating intuitive and engaging digital
-              experiences that bring delight to users and drive business success.
-            </p>
-          </div>
+        <li>
+          <Callout
+            title="UX Design"
+            text="For UX design, my expertise centers on creating user-friendly, captivating digital experiences that engage users and drive business success."
+          />
         </li>
       </ul>
     </div>
@@ -156,19 +88,6 @@
     }
   }
 
-  .icon {
-    h3 {
-      margin: 0 0.7rem 0 0;
-    }
-    svg {
-      font-size: 1.5rem;
-      color: var(--orange-10);
-    }
-  }
-
-  @media (min-width: 576px) {
-  }
-
   @media (min-width: 768px) {
     ul {
       display: flex;
@@ -176,9 +95,6 @@
       li {
         flex-basis: 50%;
         margin-bottom: 3rem;
-        p {
-          padding-right: 4rem;
-        }
         &:nth-last-child(-n + 2) {
           margin-bottom: 0;
         }
