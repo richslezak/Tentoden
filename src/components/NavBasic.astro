@@ -1,0 +1,141 @@
+---
+import ColorModeToggler from './ColorModeToggler.astro';
+---
+
+<nav class="navbar navbar-expand-md fixed-top" aria-label="Offcanvas navbar large">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        fill="currentColor"
+        viewBox="0 0 20 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M 16.363636 15.712323 C 16.363636 15.871202 16.492434 16 16.651314 16 L 19.712324 16 C 19.871202 16 20 15.871202 20 15.712323 L 20 0.287677 C 20 0.128798 19.871202 0 19.712324 0 L 16.651314 0 C 16.492434 0 16.363636 0.128798 16.363636 0.287677 Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M 10.909091 15.712323 C 10.909091 15.871202 11.037889 16 11.196768 16 L 14.257778 16 C 14.416657 16 14.545455 15.871202 14.545455 15.712323 L 14.545455 5.62101 C 14.545455 5.462131 14.416657 5.333333 14.257778 5.333333 L 11.196768 5.333333 C 11.037889 5.333333 10.909091 5.462131 10.909091 5.62101 Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M 5.454545 15.712323 C 5.454545 15.871202 5.583343 16 5.742222 16 L 8.803232 16 C 8.962111 16 9.090909 15.871202 9.090909 15.712323 L 9.090909 5.62101 C 9.090909 5.462131 8.962111 5.333333 8.803232 5.333333 L 5.742222 5.333333 C 5.583343 5.333333 5.454545 5.462131 5.454545 5.62101 Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M -0 3.267879 C -0 3.426758 0.128797 3.555555 0.287677 3.555555 L 14.257778 3.555555 C 14.416657 3.555555 14.545455 3.426758 14.545455 3.267879 L 14.545455 0.287677 C 14.545455 0.128798 14.416657 0 14.257778 0 L 0.287677 0 C 0.128797 0 -0 0.128798 -0 0.287677 Z"
+        ></path>
+      </svg>
+      Tentoden
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        fill="currentColor"
+        class="bi bi-list d-flex"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        ></path>
+      </svg>
+    </button>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close2 close-btn nav-link2"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+            <li class="nav-item">
+              <ColorModeToggler />
+            </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <style lang="scss">
+    .navbar {
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        svg {
+          width: 2rem;
+          height: auto;
+          margin-right: 0.5rem;
+        }
+      }
+      .navbar-toggler {
+        font-size: 2rem;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      .offcanvas.offcanvas-end {
+        width: 325px;
+      }
+      .offcanvas-header {
+        justify-content: end;
+        .close-btn {
+          display: flex;
+          box-sizing: content-box;
+          font-size: 4rem;
+          padding: 0;
+          background: none;
+          border: 0;
+        }
+      }
+      @media (max-width: 767px) {
+        .offcanvas {
+          .navbar-brand {
+            font-size: 2rem;
+          }
+          .nav-link {
+            font-size: 1.75rem;
+          }
+        }
+      }
+    }
+  </style>
+</nav>

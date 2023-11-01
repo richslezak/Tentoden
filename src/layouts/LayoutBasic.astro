@@ -1,7 +1,7 @@
 ---
 import '../styles/custom.scss';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from '../components/HeaderBasic.astro';
+import Footer from '../components/FooterBasic.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_AUTHOR, SITE_URL } from '../config';
 ---
 
@@ -20,7 +20,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_AUTHOR, SITE_URL } fr
     <meta name="description" content={SITE_DESCRIPTION} />
     <meta name="keywords" content={SITE_KEYWORDS} />
     <meta name="author" content={SITE_AUTHOR} />
-    <title>{SITE_TITLE} | Crafting Your Digital Footprint and Identity</title>
+    <title>{SITE_TITLE} | Who is Rich Slezak</title>
   </head>
   <body>
     <Header />
@@ -28,12 +28,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_AUTHOR, SITE_URL } fr
     <Footer />
     <script>
       import '../scripts/custom.js';
-      window.onload = function () {
-        const script = document.createElement('script');
-        script.src = 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js';
-        document.body.appendChild(script);
-      };
     </script>
   </body>
 </html>
-<!-- <style lang="scss" is:global></style> -->
