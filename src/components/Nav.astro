@@ -141,10 +141,20 @@ import ColorModeToggler from './ColorModeToggler.astro';
     }
     @media (max-width: 767px) {
       .offcanvas {
+        .offcanvas-body {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
         .navbar-brand {
           font-size: 2rem;
         }
+        .nav-item:last-child {
+          padding-top: 1.5rem;
+        }
         .nav-link {
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+          border-bottom: 1px solid;
           font-size: 1.75rem;
         }
       }

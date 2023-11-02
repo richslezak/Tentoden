@@ -150,9 +150,9 @@
       &.showing {
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-        .nav-link,
-        .navbar-brand {
+        .nav-link {
           color: var(--orange-10);
+          border-bottom-color: var(--orange-10);
         }
         .bd-mode-toggle {
           .btn-bd-primary {
