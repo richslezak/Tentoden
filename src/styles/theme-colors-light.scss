@@ -143,16 +143,21 @@
       border-color: transparent;
     }
     .offcanvas {
-      background-color: var(--orange-10);
-      border-left-color: var(--orange-9);
+      background-color: var(--slate-1);
+      border-left-color: var(--orange-10);
       &.show,
       &.hiding,
       &.showing {
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         .nav-link {
-          color: var(--orange-4);
-          border-bottom-color: var(--orange-4);
+          color: var(--orange-10);
+          border-bottom-color: var(--orange-10);
+        }
+        .bd-mode-toggle {
+          .btn-bd-primary {
+            color: var(--orange-10);
+          }
         }
       }
     }
@@ -166,7 +171,7 @@
     }
     .offcanvas-header {
       .close-btn {
-        color: var(--orange-4);
+        color: var(--orange-10);
       }
     }
   }

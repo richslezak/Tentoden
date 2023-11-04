@@ -38,6 +38,18 @@ section[id^='nav-'] {
   padding-bottom: 6rem;
 }
 
+// scroll animations
+.animate-on-scroll {
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(100px);
+}
+
+.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 // Media Queries
 @media (min-width: 576px) {
 }
