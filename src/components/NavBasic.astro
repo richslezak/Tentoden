@@ -83,10 +83,17 @@ import ColorModeToggler from './ColorModeToggler.astro';
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-            <li class="nav-item">
-              <ColorModeToggler />
-            </li>
+            <a class="nav-link" href="#nav-intro">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#nav-attributes">Attributes</a>
+          </li>
+          <li class="nav-item"><a href="#nav-skills" class="nav-link">Skills</a></li>
+          <li class="nav-item">
+            <a href="#nav-hobbies" class="nav-link">Hobbies</a>
+          </li>
+          <li class="nav-item">
+            <ColorModeToggler />
           </li>
         </ul>
       </div>
@@ -128,10 +135,20 @@ import ColorModeToggler from './ColorModeToggler.astro';
       }
       @media (max-width: 767px) {
         .offcanvas {
+          .offcanvas-body {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+          }
           .navbar-brand {
             font-size: 2rem;
           }
+          .nav-item:last-child {
+            padding-top: 1.5rem;
+          }
           .nav-link {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid;
             font-size: 1.75rem;
           }
         }
