@@ -1,0 +1,44 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  videosrc?: string;
+  href?: string;
+  ribbon?: boolean;
+  ribbonTitle?: string;
+}
+
+import Ribbon from './Ribbon.astro';
+const { videosrc, title, description, href, ribbon, ribbonTitle } = Astro.props;
+const content = title || description;
+---
+
+<div class="card shadow-sm">
+  {ribbon && <Ribbon ribbonTitle={ribbonTitle} />}
+  <video src={videosrc} class={content && 'no-bottom-radius'} controls></video>
+  {href && <a href={href} class="stretched-link" target="_blank" />}
+  {
+    content && (
+      <div class="card-body">
+        {title && <h5 class="card-title">{title}</h5>}
+        {description && <p class="card-text">{description}</p>}
+      </div>
+    )
+  }
+</div>
+<style>
+  .card {
+    border: 1px solid var(--slate-5);
+  }
+
+  video {
+    border-radius: 0.275rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .no-bottom-radius {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+</style>
