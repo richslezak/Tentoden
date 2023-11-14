@@ -3,19 +3,20 @@ interface Props {
   title?: string;
   description?: string;
   videosrc?: string;
+  poster?: string;
   href?: string;
   ribbon?: boolean;
   ribbonTitle?: string;
 }
 
 import Ribbon from './Ribbon.astro';
-const { videosrc, title, description, href, ribbon, ribbonTitle } = Astro.props;
+const { videosrc, poster, title, description, href, ribbon, ribbonTitle } = Astro.props;
 const content = title || description;
 ---
 
 <div class="card shadow-sm">
   {ribbon && <Ribbon ribbonTitle={ribbonTitle} />}
-  <video src={videosrc} class={content && 'no-bottom-radius'} controls></video>
+  <video src={videosrc} class={content && 'no-bottom-radius'} controls poster={poster}></video>
   {href && <a href={href} class="stretched-link" target="_blank" />}
   {
     content && (
