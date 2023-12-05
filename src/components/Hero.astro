@@ -1,12 +1,25 @@
+---
+import Greeting from './Greeting.jsx';
+---
+
 <section
   class="hero d-flex flex-column justify-content-center align-items-center text-center min-vh-100"
 >
   <div class="px-2 text-center">
-    <h1 class="display-2 lh-1 mb-3">
-      Welcome to <span>Tentoden</span>
+    <h1 class="lh-1 mb-3">
+      <span>Tentoden</span>
     </h1>
-    <div class="headline">
-      <p class="lead mb-4 fs-3">Crafting Your Digital Footprint and Identity</p>
+    <div class="headline mb-4">
+      <Greeting
+        client:load
+        messages={[
+          'The future depends on what you do today.',
+          'The best way to predict the future is to create it.',
+          'Make this day your day every single day.',
+          'If you want it to happen, make it happen now. Make "someday" today.',
+          'The only way to do great work is to love what you do.',
+        ]}
+      />
     </div>
     <div class="buttons">
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -31,9 +44,15 @@
       filter: grayscale(100%);
       opacity: 0.5;
     }
+    h1 {
+      font-size: calc(2rem + 5vw);
+      font-weight: 300;
+    }
     .headline {
-      max-width: 280px;
+      max-width: 300px;
       margin: 0 auto;
+      font-size: 1.4rem;
+      font-weight: 300;
     }
     .buttons {
       max-width: 260px;
@@ -49,12 +68,22 @@
     .hero {
       .headline {
         max-width: 100%;
+        font-size: 1.5rem;
       }
       .buttons {
         max-width: 100%;
         .btn {
           width: 175px;
         }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .hero {
+      .headline {
+        max-width: 100%;
+        font-size: 1.75rem;
       }
     }
   }
