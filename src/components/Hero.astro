@@ -1,5 +1,6 @@
 ---
 import Greeting from './Greeting.jsx';
+import ScrollDownIcon from './ScrollDownIcon.astro';
 ---
 
 <section
@@ -16,19 +17,20 @@ import Greeting from './Greeting.jsx';
           'The future depends on what you do today.',
           'The best way to predict the future is to create it.',
           'Make this day your day every single day.',
+          'Seize the day. Make it ridiculously amazing.',
+          'Today is your opportunity to build the tomorrow you want.',
           'If you want it to happen, make it happen now. Make "someday" today.',
           'The only way to do great work is to love what you do.',
+          'Today is the day to chase your dreams and turn them into reality.',
         ]}
       />
     </div>
-    <div class="buttons">
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="#nav-contact" class="btn btn-primary btn-md px-4 me-sm-2">Contact</a>
-        <a href="#nav-work" class="btn btn-primary btn-md px-4">Work</a>
-      </div>
-    </div>
+  </div>
+  <div id="scroll-container">
+    <ScrollDownIcon anchor="#nav-about" />
   </div>
 </section>
+
 <style lang="scss">
   .hero {
     &::before {
@@ -50,13 +52,23 @@ import Greeting from './Greeting.jsx';
     }
     .headline {
       max-width: 300px;
+      min-height: 110px;
       margin: 0 auto;
       font-size: 1.4rem;
       font-weight: 300;
+      opacity: 0;
+      filter: blur(4px);
+      animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
-    .buttons {
-      max-width: 260px;
-      margin: 0 auto;
+    @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+    #scroll-container {
+      position: absolute;
+      bottom: 2rem;
     }
   }
 
@@ -72,12 +84,7 @@ import Greeting from './Greeting.jsx';
       .headline {
         max-width: 100%;
         font-size: 1.5rem;
-      }
-      .buttons {
-        max-width: 100%;
-        .btn {
-          width: 175px;
-        }
+        min-height: 80px;
       }
     }
   }
@@ -86,6 +93,7 @@ import Greeting from './Greeting.jsx';
     .hero {
       .headline {
         font-size: 1.75rem;
+        min-height: auto;
       }
     }
   }
