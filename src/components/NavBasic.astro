@@ -83,14 +83,28 @@ import ColorModeToggler from './ColorModeToggler.astro';
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link" href="#nav-intro">Introduction</a>
+            <a class="nav-link" href="#nav-intro">
+              <span>Introduction</span>
+              <span>Introduction</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#nav-attributes">Attributes</a>
+            <a class="nav-link" href="#nav-attributes">
+              <span>Attributes</span>
+              <span>Attributes</span>
+            </a>
           </li>
-          <li class="nav-item"><a href="#nav-skills" class="nav-link">Skills</a></li>
           <li class="nav-item">
-            <a href="#nav-hobbies" class="nav-link">Hobbies</a>
+            <a href="#nav-skills" class="nav-link">
+              <span>Skills</span>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#nav-hobbies" class="nav-link">
+              <span>Hobbies</span>
+              <span>Hobbies</span>
+            </a>
           </li>
           <li class="nav-item">
             <ColorModeToggler />
@@ -99,60 +113,92 @@ import ColorModeToggler from './ColorModeToggler.astro';
       </div>
     </div>
   </div>
-
-  <style lang="scss">
-    .navbar {
-      .navbar-brand {
-        font-size: 1.5rem;
-        font-weight: 500;
+</nav>
+<style lang="scss">
+  .navbar {
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      svg {
+        width: 2rem;
+        height: auto;
+        margin-right: 0.5rem;
+      }
+    }
+    .navbar-toggler {
+      font-size: 2rem;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .nav-link {
+      span:nth-of-type(2) {
+        display: none;
+      }
+    }
+    .offcanvas.offcanvas-end {
+      width: 325px;
+    }
+    .offcanvas-header {
+      justify-content: end;
+      .close-btn {
         display: flex;
-        align-items: center;
-        svg {
-          width: 2rem;
-          height: auto;
-          margin-right: 0.5rem;
+        box-sizing: content-box;
+        font-size: 4rem;
+        padding: 0;
+        background: none;
+        border: 0;
+      }
+    }
+    @media (max-width: 767px) {
+      .offcanvas {
+        .offcanvas-body {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+        .navbar-brand {
+          font-size: 2rem;
+        }
+        .nav-item:last-child {
+          padding-top: 1.5rem;
+        }
+        .nav-link {
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+          border-bottom: 1px solid;
+          font-size: 1.75rem;
         }
       }
-      .navbar-toggler {
-        font-size: 2rem;
-        &:focus {
-          box-shadow: none;
+    }
+    @media (min-width: 768px) {
+      .nav-link {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0.5rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        span {
+          transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+          &:nth-of-type(2) {
+            display: block;
+            position: absolute;
+            top: 0;
+            transform: translate(0, 100%);
+          }
         }
-      }
-      .offcanvas.offcanvas-end {
-        width: 325px;
-      }
-      .offcanvas-header {
-        justify-content: end;
-        .close-btn {
-          display: flex;
-          box-sizing: content-box;
-          font-size: 4rem;
-          padding: 0;
-          background: none;
-          border: 0;
-        }
-      }
-      @media (max-width: 767px) {
-        .offcanvas {
-          .offcanvas-body {
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
-          }
-          .navbar-brand {
-            font-size: 2rem;
-          }
-          .nav-item:last-child {
-            padding-top: 1.5rem;
-          }
-          .nav-link {
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid;
-            font-size: 1.75rem;
+        &:hover {
+          span {
+            transform: translate(0px, -101%);
+            &:nth-of-type(2) {
+              transform: translate(0px, 0%);
+            }
           }
         }
       }
     }
-  </style>
-</nav>
+  }
+</style>

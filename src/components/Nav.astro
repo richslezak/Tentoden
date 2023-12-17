@@ -78,19 +78,34 @@ import ColorModeToggler from './ColorModeToggler.astro';
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link" href="#nav-about">About</a>
+            <a class="nav-link" href="#nav-about">
+              <span>About</span>
+              <span>About</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#nav-design">Design</a>
+            <a class="nav-link" href="#nav-design">
+              <span>Design</span>
+              <span>Design</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#nav-development">Development</a>
+            <a class="nav-link" href="#nav-development">
+              <span>Development</span>
+              <span>Development</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#nav-work">Work</a>
+            <a class="nav-link" href="#nav-work">
+              <span>Work</span>
+              <span>Work</span>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#nav-contact">Contact</a>
+            <a class="nav-link" href="#nav-contact">
+              <span>Contact</span>
+              <span>Contact</span>
+            </a>
           </li>
           <li class="nav-item">
             <ColorModeToggler />
@@ -118,6 +133,11 @@ import ColorModeToggler from './ColorModeToggler.astro';
       font-size: 2rem;
       &:focus {
         box-shadow: none;
+      }
+    }
+    .nav-link {
+      span:nth-of-type(2) {
+        display: none;
       }
     }
     .offcanvas.offcanvas-end {
@@ -151,6 +171,34 @@ import ColorModeToggler from './ColorModeToggler.astro';
           padding-bottom: 1.5rem;
           border-bottom: 1px solid;
           font-size: 1.75rem;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      .nav-link {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0.5rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        span {
+          transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+          &:nth-of-type(2) {
+            display: block;
+            position: absolute;
+            top: 0;
+            transform: translate(0, 100%);
+          }
+        }
+        &:hover {
+          span {
+            transform: translate(0px, -101%);
+            &:nth-of-type(2) {
+              transform: translate(0px, 0%);
+            }
+          }
         }
       }
     }
