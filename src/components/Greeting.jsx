@@ -5,9 +5,5 @@ export default function Greeting({ messages }) {
 
   const [greeting, setGreeting] = useState(randomMessage());
 
-  return (
-    <p class="text-capitalize" onClick={() => setGreeting(randomMessage())}>
-      {greeting}
-    </p>
-  );
+  return <p onClick={() => setGreeting(randomMessage())}>{greeting}</p>;
 }

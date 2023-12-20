@@ -3,28 +3,20 @@ import Greeting from './Greeting.jsx';
 import ScrollDownIcon from './ScrollDownIcon.astro';
 ---
 
-<section
-  class="hero d-flex flex-column justify-content-center align-items-center text-center min-vh-100"
->
-  <div class="px-2 text-center">
-    <h1 class="lh-1 mb-3">
-      <span>Tentoden</span>
-    </h1>
-    <div class="headline mb-4">
-      <Greeting
-        client:load
-        messages={[
-          'The future depends on what you do today.',
-          'The best way to predict the future is to create it.',
-          'Make this day your day every single day.',
-          'Seize the day. Make it ridiculously amazing.',
-          'Today is your opportunity to build the tomorrow you want.',
-          'If you want it to happen, make it happen now. Make "someday" today.',
-          'The only way to do great work is to love what you do.',
-          'Today is the day to chase your dreams and turn them into reality.',
-        ]}
-      />
-    </div>
+<section class="hero d-flex flex-column justify-content-center align-items-center min-vh-100">
+  <div class="headline mb-4">
+    <Greeting
+      client:load
+      messages={[
+        'The future depends on what you do today',
+        'The best way to predict the future is to create it',
+        'Make this day your day every single day',
+        'Seize the day Make it ridiculously amazing',
+        'Today is your opportunity to build the tomorrow you want',
+        'If you want it to happen make it happen now Make someday today',
+        'Today is the day to chase your dreams and turn them into reality',
+      ]}
+    />
   </div>
   <div id="scroll-container">
     <ScrollDownIcon anchor="#nav-about" />
@@ -46,23 +38,21 @@ import ScrollDownIcon from './ScrollDownIcon.astro';
       filter: grayscale(100%);
       opacity: 0.5;
     }
-    h1 {
-      font-size: 4.25rem;
-      font-weight: 300;
-    }
     .headline {
       max-width: 300px;
-      min-height: 110px;
       margin: 0 auto;
-      font-size: 1.4rem;
-      font-weight: 300;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 400;
       opacity: 0;
+      line-height: 0.5;
       filter: blur(4px);
-      animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      animation: fade-in 0.5s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
     }
     @keyframes fade-in {
       100% {
         opacity: 1;
+        line-height: 1.1;
         filter: blur(0);
       }
     }
@@ -72,19 +62,11 @@ import ScrollDownIcon from './ScrollDownIcon.astro';
     }
   }
 
-  div {
-    z-index: 2;
-  }
-
   @media (min-width: 576px) {
     .hero {
-      h1 {
-        font-size: 6rem;
-      }
       .headline {
-        max-width: 100%;
-        font-size: 1.5rem;
-        min-height: 80px;
+        max-width: 85%;
+        font-size: 4rem;
       }
     }
   }
@@ -92,8 +74,15 @@ import ScrollDownIcon from './ScrollDownIcon.astro';
   @media (min-width: 992px) {
     .hero {
       .headline {
-        font-size: 1.75rem;
-        min-height: auto;
+        font-size: 5.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero {
+      .headline {
+        font-size: 7rem;
       }
     }
   }
