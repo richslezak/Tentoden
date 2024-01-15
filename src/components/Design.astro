@@ -37,34 +37,6 @@ import Callout from './Callout.astro';
         </div>
       </div>
     </div>
-    <div class="row align-itemns-center pt-5">
-      <ul class="list-unstyled">
-        <li>
-          <Callout
-            title="Graphic Design"
-            text="My goal is to support you in effectively conveying your brand's message, helping you shine in a crowded market and connect with your target audience."
-          />
-        </li>
-        <li>
-          <Callout
-            title="Web Design"
-            text="Crafting modern, responsive designs tailored to your brand and business, with a focus on delivering a seamless user experience across all devices."
-          />
-        </li>
-        <li>
-          <Callout
-            title="UI Design"
-            text="The emphasis here is on crafting visually appealing, user-friendly interfaces that elevate the user experience and result in captivating digital products."
-          />
-        </li>
-        <li>
-          <Callout
-            title="UX Design"
-            text="My expertise centers on creating user-friendly, captivating digital experiences that engage users and drive business success."
-          />
-        </li>
-      </ul>
-    </div>
   </div>
 </section>
 <style lang="scss">
@@ -75,30 +47,6 @@ import Callout from './Callout.astro';
     svg {
       font-size: 3rem;
       color: var(--orange-10);
-    }
-  }
-
-  ul {
-    margin-bottom: 0;
-    li {
-      margin-bottom: 3rem;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-        flex-basis: 50%;
-        margin-bottom: 3rem;
-        &:nth-last-child(-n + 2) {
-          margin-bottom: 0;
-        }
-      }
     }
   }
 

@@ -5,11 +5,34 @@
         <h2 class="display-4 mb-0">What is</h2>
         <h1 class="display-1 mb-4">Tentoden</h1>
         <p class="lead mb-4 fs-2 text-start">
-          The words 'Tento den' derive from the Czech language and translate to 'this day',
-          encapsulating the notion of embracing the present moment. I embody this philosophy in all
-          my endeavors. I'm Richard Slezak, a digital designer and developer based in Boston, MA,
-          and the founder of Tentoden. This website is my portfolio, where I share my journey in
-          design and development.
+          The words 'Tento den' <button
+            type="button"
+            id="btn-audio-tentoden"
+            aria-label="click to hear pronunciation"
+            onclick="document.getElementById('audio-tentoden').play()"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              class="bi bi-volume-up"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"
+              ></path>
+              <path
+                d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"
+              ></path>
+              <path
+                d="M10.025 8a4.5 4.5 0 0 1-1.318 3.182L8 10.475A3.5 3.5 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.5 4.5 0 0 1 10.025 8M7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11"
+              ></path>
+            </svg>
+          </button> derive from the Czech language and translate to 'this day', encapsulating the notion
+          of embracing the present moment. I embody this philosophy in all my endeavors. I'm Richard
+          Slezak, a digital designer and developer based in Boston, MA, and the founder of Tentoden.
+          This website is my portfolio, where I share my journey in design and development.
+          <audio id="audio-tentoden" src="/tentoden.m4a"></audio>
         </p>
       </div>
     </div>
@@ -18,6 +41,16 @@
 <style lang="scss">
   .display-1 {
     line-height: 0.8;
+    color: var(--orange-10);
+  }
+
+  #btn-audio-tentoden {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
     color: var(--orange-10);
   }
 </style>
