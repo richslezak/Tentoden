@@ -36,4 +36,22 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_AUTHOR, SITE_URL } fr
     </script>
   </body>
 </html>
-<!-- <style lang="scss" is:global></style> -->
+<style lang="scss" is:global>
+  .title {
+    h2 {
+      margin-right: 0.7rem;
+    }
+    svg {
+      font-size: 3rem;
+      color: var(--orange-10);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .title {
+      svg {
+        font-size: 4rem;
+      }
+    }
+  }
+</style>

@@ -42,49 +42,9 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2rem));
   }
 
-  .title {
-    h2 {
-      margin-right: 0.7rem;
-    }
-    svg {
-      font-size: 3rem;
-      color: var(--orange-10);
-    }
-  }
-
-  ul {
-    li {
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  @media (min-width: 400px) {
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      li {
-        flex-basis: 50%;
-      }
-    }
-  }
-
   @media (min-width: 768px) {
     section {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5rem));
-    }
-  }
-
-  @media (min-width: 992px) {
-    .title {
-      svg {
-        font-size: 4rem;
-      }
-    }
-
-    ul {
-      li {
-        flex-basis: 25%;
-      }
     }
   }
 </style>

@@ -20,7 +20,7 @@ import ContactForm from './ContactForm.astro';
       </svg>
     </div>
     <div class="row">
-      <div class="col-12 col-md-6 col-lg-7">
+      <div class="col-12 col-lg-7">
         <p class="lead mb-5 fs-4">
           Ready to bring your visions to life? Whether you're looking for stunning graphic design, a
           cutting-edge website, or a perfect blend of both, I'm here to help you shine online.
@@ -31,31 +31,16 @@ import ContactForm from './ContactForm.astro';
           conversation about your next big project.
         </p>
       </div>
-      <div class="col-12 col-md-6 col-lg-5">
+      <div class="col-12 col-lg-5">
         <ContactForm />
       </div>
     </div>
   </div>
 </section>
 <style lang="scss">
-  .title {
-    h2 {
-      margin-right: 0.7rem;
-    }
-    svg {
-      font-size: 3rem;
-      color: var(--orange-10);
-    }
-  }
-
   @media (min-width: 992px) {
-    .title {
-      svg {
-        font-size: 4rem;
-      }
-    }
-
     p {
+      text-wrap: balance;
       padding-right: 5rem;
     }
   }
